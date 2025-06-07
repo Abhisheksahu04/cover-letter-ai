@@ -18,16 +18,19 @@ const Index = () => {
         setCoverLetter("");
 
         try {
-            const response = await fetch("http://localhost:5000/api/generate", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    resumeContent: resumeContent,
-                    jobDescription: jobDescription,
-                }),
-            });
+            const response = await fetch(
+                `${import.meta.env.VITE_SERVER_URL}/api/generate`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        resumeContent: resumeContent,
+                        jobDescription: jobDescription,
+                    }),
+                }
+            );
 
             if (!response.ok) {
                 throw new Error("Failed to generate cover letter.");
