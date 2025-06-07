@@ -25,6 +25,7 @@ An intelligent web application that creates personalized cover letters from user
 
 ### 🔙 Backend
 
+-   **CODE** - https://github.com/Abhisheksahu04/cover-letter-backend
 -   **Node.js** — Runtime environment
 -   **Express.js** — API server
 -   **dotenv** — Secure environment variable management
